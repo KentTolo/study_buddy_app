@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Buddy - Your Personal Study Assistant</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #F4F4F9;
+        }
+
+        .main_section{
+          padding: 15px;
+      }
+
+        .container {
+            display: flex;
+        }
+
+        .sidebar {
+            background-color: #A8E1C5;
+            width: 250px;
+            height: 100vh;
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            border-radius: 0 20px 20px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            border-radius: 30px 0 0 30px;
+        }
+
+        .sidebar ul li a.active {
+            background-color: white;
+            color: #000;
+            border-radius: 50px 0 0 50px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar ul li a .icon {
+            margin-right: 10px;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        .main-content {
+            margin-left: 270px;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .welcome-section {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .welcome-section p {
+            font-size: 1.2rem;
+            color: #333;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 20px;
+        }
+
+        .feature-card p {
+            color: #333;
+        }
+
+        .quick-actions {
+            margin-top: 3rem;
+        }
+
+        .quick-actions h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 24px;
+        }
+
+        .actions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .action-button {
+            display: inline-block;
+            padding: 1rem;
+            background-color: #A8E1C5;
+            color: black;
+            text-decoration: none;
+            border-radius: 12px;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .action-button:hover {
+            background-color: #96ceb1;
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">
+                        <span class="icon">🏠</span>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="timetable.html">
+                        <span class="icon">📅</span>
+                        <span>Timetable</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="calendar.html">
+                        <span class="icon">📆</span>
+                        <span>Calendar</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="tasks.html">
+                        <span class="icon">📝</span>
+                        <span>Tasks</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="notes.html">
+                        <span class="icon">🗒️</span>
+                        <span>Notes</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main_section">
+          <div class="main-content">
+            <section class="welcome-section">
+                <h1>Welcome to Study Buddy</h1>
+                <p>Your all-in-one study management solution. Stay organized, focused, and on track with your academic goals.</p>
+            </section>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><span class="icon">📅</span> Timetable</h3>
+                    <p>Organize your weekly schedule with an easy-to-use timetable. Keep track of classes and study sessions.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">📆</span> Calendar</h3>
+                    <p>Plan ahead with our calendar feature. Mark important dates, exams, and assignment deadlines.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">📝</span> Tasks</h3>
+                    <p>Break down your assignments into manageable tasks. Set priorities and track your progress.</p>
+                </div>
+                <div class="feature-card">
+                    <h3><span class="icon">🗒️</span> Notes</h3>
+                    <p>Take and organize your study notes. Access them anywhere, anytime.</p>
+                </div>
+            </div>
+
+            <section class="quick-actions">
+                <h2>Quick Actions</h2>
+                <div class="actions-grid">
+                    <a href="tasks.html" class="action-button">Add New Task</a>
+                    <a href="notes.html" class="action-button">Create Note</a>
+                    <a href="calendar.html" class="action-button">Schedule Event</a>
+                    <a href="timetable.html" class="action-button">View Schedule</a>
+                </div>
+            </section>
+        </div>
+        </div>
+        
+    </div>
+</body>
+</html>
